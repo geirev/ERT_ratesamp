@@ -70,7 +70,7 @@ the `build` directory of the `ERT_ratesamp` repository using:
 make BUILD=../../ERT_ratesamp/build
 ```
 
-## 4. Compile the `ERT_ratesamp` library
+## 4. Compile `ERT_ratesamp` code
 
 Navigate to the `src` folder of the `ERT_ratesamp` repository:
 
@@ -95,7 +95,38 @@ ertsampling
 The code will use precompiled paths and filenames and output an ensemble of realizations of perturbed wellrates
 CONTROL_0 -- CONTROL_N, a file wells.txt with wellnames, and an "obsolete" file EPERT_0 containing all the realizations.
 
+You have to provide the precompiled paths to files
+```bash
+   obshistfile='/home/geve/Dropbox/Statoil/erterr/observations/obshistnew.txt' # input to ERT
+```
+Example file (note that this is the only accepted version/format of this file)
+```bash
+HISTORY_OBSERVATION WOPR:OP_1 { ERROR = 0.05 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WOPR:OP_2 { ERROR = 0.05 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WOPR:OP_3 { ERROR = 0.05 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WOPR:OP_4 { ERROR = 0.05 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WOPR:OP_5 { ERROR = 0.05 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WGPR:OP_1 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =  100.0; };
+HISTORY_OBSERVATION WGPR:OP_2 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =  100.0; };
+HISTORY_OBSERVATION WGPR:OP_3 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =  100.0; };
+HISTORY_OBSERVATION WGPR:OP_4 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =  100.0; };
+HISTORY_OBSERVATION WGPR:OP_5 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =  100.0; };
+HISTORY_OBSERVATION WWPR:OP_1 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WWPR:OP_2 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WWPR:OP_3 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WWPR:OP_4 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+HISTORY_OBSERVATION WWPR:OP_5 { ERROR = 0.10 ; ERROR_MODE = RELMIN; ERROR_MIN =   10.0; };
+```
 
+
+A standard schedule file from where we extract wellnames and rates.
+```bash
+   schedulefile='/home/geve/Dropbox/Statoil/eclipse/include/history.sch'
+```
+The place to save the CONTROL files with perturbed rates and a copy of the wells.txt file
+   controlpath='/home/geve/Dropbox/Statoil/eclipse/Priors/control/'
+
+Note that the wells.txt file may need to be edited before use.
 
 
 
