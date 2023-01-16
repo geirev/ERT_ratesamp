@@ -1,27 +1,60 @@
-X5sqrt	mod_anafunc.F90	/^subroutine X5sqrt(X2,nrobs,nrens,nrmin,X5,lrandrot/
-dumpX3	mod_anafunc.F90	/^subroutine dumpX3(X3,S,nrobs,nrens)$/
-dumpX5	mod_anafunc.F90	/^subroutine dumpX5(X5,nrens)$/
-eigC	mod_anafunc.F90	/^subroutine eigC(R,nrobs,Z,eig)$/
-eigsign	mod_anafunc.F90	/^subroutine eigsign(eig,nrobs,truncation)$/
-enkf	m_enkf.F90	/^subroutine enkf(mem,nx,nrens,obs,obsvar,obspos,nro/
-ensmean	m_ensmean.F90	/^subroutine ensmean(A,ave,nx,nrens)$/
-ensvar	m_ensvar.F90	/^subroutine ensvar(A,ave,var,nx,nrens)$/
-fixsample1D	m_fixsample1D.F90	/^subroutine fixsample1D(E,n,m)$/
-genX2	mod_anafunc.F90	/^subroutine genX2(nrens,nrobs,nrmin,S,W,eig,X2)$/
-genX3	mod_anafunc.F90	/^subroutine genX3(nrens,nrobs,nrmin,eig,W,D,X3)$/
-getD	m_getD.F90	/^subroutine getD(D,subD,nrobs,nrens,lobs,nobs)$/
-inflateA	mod_anafunc.F90	/^subroutine inflateA(ndim,nrens,A,inflation)$/
-inflationfactor	mod_anafunc.F90	/^subroutine inflationfactor(X5,nrens,inffac)$/
-lowrankCee	mod_anafunc.F90	/^subroutine lowrankCee(B,nrmin,nrobs,nrens,R,U0,sig/
-lowrankCinv	mod_anafunc.F90	/^subroutine lowrankCinv(S,R,nrobs,nrens,nrmin,W,eig/
-lowrankE	mod_anafunc.F90	/^subroutine lowrankE(S,E,nrobs,nrens,nrmin,W,eig,tr/
-meanX5	mod_anafunc.F90	/^subroutine meanX5(nrens,nrobs,nrmin,S,W,eig,innov,/
-measurements	m_measurements.F90	/^subroutine measurements(ana,nx,obs,obspos,nrobs,ob/
-newton1D	m_newton1D.F90	/^subroutine newton1D(r1,n1,dx,rx,lconv)$/
-newtonfunc1D	m_newtonfunc1D.F90	/^subroutine newtonfunc1D(f,f1,r1,n1,dx,rx)$/
-obs_pert	m_obs_pert.F90	/^subroutine obs_pert(E,nrens,nrobs,fixsamp,nre,nrr,/
-pseudo1D	m_pseudo1D.F90	/^subroutine pseudo1D(A,nx,nrfields,rx,dx,n1)$/
-randrot	m_randrot.F90	/^subroutine randrot(Q,nrens)$/
-sample1D	m_sample1D.F90	/^subroutine sample1D(A2,n,nrens,nre,nrr,dx,rh,samp_/
-set_random_seed2	m_set_random_seed2.F90	/^subroutine set_random_seed2$/
-svdS	mod_anafunc.F90	/^subroutine svdS(S,nrobs,nrens,nrmin,U0,sig0,trunca/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+100	sample.F90	/^      100 rewind(10)$/;"	l	program:sample	file:
+200	sample.F90	/^   200 close(10)$/;"	l	program:sample	file:
+300	sample.F90	/^   300 close(10)$/;"	l	program:sample	file:
+A	sample.F90	/^   type(wellrates), allocatable :: A(/;"	v	program:sample
+B	sample.F90	/^   real, allocatable :: B(/;"	v	program:sample
+cens	sample.F90	/^   character(len=4) cens$/;"	v	program:sample
+ck	sample.F90	/^   character(len=4) ck$/;"	v	program:sample
+cline	sample.F90	/^   character(len=100) cline$/;"	v	program:sample
+cnoise	sample.F90	/^   character(len=1) cnoise$/;"	v	program:sample
+cnx	sample.F90	/^   character(len=4) cnx$/;"	v	program:sample
+controlpath	sample.F90	/^   character(len=200) controlpath$/;"	v	program:sample
+cor1	sample.F90	/^   real :: cor1=/;"	v	program:sample
+dq	sample.F90	/^   character, parameter :: dq /;"	v	program:sample
+dx	sample.F90	/^   real dx$/;"	v	program:sample
+ex	sample.F90	/^   logical ex$/;"	v	program:sample
+gpr	sample.F90	/^      real gpr(/;"	k	type:wellrates
+i	sample.F90	/^   in/;"	v	program:sample
+ic	sample.F90	/^   integer i,j,k,l,m,ic,/;"	v	program:sample
+idat	sample.F90	/^   integer idat$/;"	v	program:sample
+ipos	sample.F90	/^   integer ipos(/;"	v	program:sample
+istat	sample.F90	/^   integer istat$/;"	v	program:sample
+iwell	sample.F90	/^   integer iwell$/;"	v	program:sample
+j	sample.F90	/^   integer i,j,/;"	v	program:sample
+j1	sample.F90	/^   integer i,j,k,l,m,ic,j1$/;"	v	program:sample
+k	sample.F90	/^   integer i,j,k,/;"	v	program:sample
+l	sample.F90	/^   integer i,j,k,l,/;"	v	program:sample
+m	sample.F90	/^   integer i,j,k,l,m,/;"	v	program:sample
+min_err	sample.F90	/^   real min_err$/;"	v	program:sample
+n1	sample.F90	/^   integer n1 /;"	v	program:sample
+noise	sample.F90	/^   integer noise$/;"	v	program:sample
+nrens	sample.F90	/^   integer, parameter :: nrens=/;"	v	program:sample
+nrvars	sample.F90	/^   integer, parameter :: nrvars=/;"	v	program:sample
+nrwells	sample.F90	/^   integer :: nrwells /;"	v	program:sample
+nx	sample.F90	/^   integer, parameter :: nx=/;"	v	program:sample
+obshistfile	sample.F90	/^   character(len=100) :: obshistfile=/;"	v	program:sample
+opr	sample.F90	/^      real opr(/;"	k	type:wellrates
+priorpath	sample.F90	/^   character(len=100) :: priorpath=/;"	v	program:sample
+rates	sample.F90	/^   type(wellrates)/;"	v	program:sample
+rel_err	sample.F90	/^   real rel_err$/;"	v	program:sample
+sample	sample.F90	/^program sample$/;"	p
+schedulefile	sample.F90	/^   character(len=100) :: schedulefile=/;"	v	program:sample
+stddev	sample.F90	/^   type(wellrates), allocatable :: rates(:),stddev(/;"	v	program:sample
+string1	sample.F90	/^   character(len=200) string1$/;"	v	program:sample
+string2	sample.F90	/^   character(len=200) string2$/;"	v	program:sample
+string3	sample.F90	/^   character(len=200) string3$/;"	v	program:sample
+string4	sample.F90	/^   character(len=200) string4$/;"	v	program:sample
+tmp	sample.F90	/^   character(len=1) tmp$/;"	v	program:sample
+var	sample.F90	/^   character(len=4) var$/;"	v	program:sample
+well	sample.F90	/^   character(len=4) well$/;"	v	program:sample
+wellname	sample.F90	/^      character(len=4)  wellname$/;"	k	type:wellrates
+wellname	sample.F90	/^   character(len=8) wellname$/;"	v	program:sample
+wellrates	sample.F90	/^   type wellrates$/;"	t	program:sample
+wpr	sample.F90	/^      real wpr(/;"	k	type:wellrates
+xlength	sample.F90	/^   real :: xlength=/;"	v	program:sample
